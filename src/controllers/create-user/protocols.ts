@@ -1,9 +1,16 @@
 import { User } from "../../modes/user";
+import { HttpResponse, httpRequest } from "../protocols";
+
+export interface ICreateUserController {
+  handle(
+    httpRequest: httpRequest<CreateUserParams>
+  ): Promise<HttpResponse<User>>;
+}
 
 export interface CreateUserParams {
   firstName: string;
   lastName: string;
-  emal: string;
+  email: string;
   password: string;
 }
 
