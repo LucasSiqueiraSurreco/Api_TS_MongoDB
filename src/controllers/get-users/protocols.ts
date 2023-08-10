@@ -1,10 +1,5 @@
-import { User } from "../../modes/user"
-import { HttpResponse } from "../protocols"
+import { User } from "../../modes/user";
 
-export interface IGetUsersController {
-    handle(): Promise<HttpResponse<User[]>>
-}
-
-export interface IGetUsersRepository{
-    getUsers(): Promise<User[]>
+export interface IGetUsersRepository {
+  getUsers(): Promise<User[]>;
 }
